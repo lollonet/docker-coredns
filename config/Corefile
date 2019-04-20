@@ -1,0 +1,9 @@
+. {
+    forward . 192.168.63.1:53
+    cache {
+	success 5000
+	denial 2500
+	}
+        errors stdout
+        log stdout
+}

@@ -2,7 +2,7 @@
 version: '3.1'
 services:
   coredns:
-    image: yorickps/coredns
+    image: coredns
     #build: .
     container_name: coredns 
     restart: on-failure
@@ -10,7 +10,7 @@ services:
       - '53'
       - '53/udp'
     ports:
-      - '53:53'
-      - '53:53/udp'
+      - '127.0.0.1:53:53'
+      - '127.0.0.1:53:53/udp'
     volumes:
       - './config:/etc/coredns'
